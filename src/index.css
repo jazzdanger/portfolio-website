@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sora: 'Sora', sans-serif;
+  --font-jetbrains: 'JetBrains Mono', monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sora);
+  background-color: #000000;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+html.light body {
+  background-color: #f8fafc;
+  color: #18181b;
+}
+
+html.light .bg-black,
+html.light .bg-gray-900,
+html.light .bg-gray-900\/50,
+html.light .bg-gray-800,
+html.light .bg-gray-700 {
+  background-color: #f8fafc !important;
+}
+
+html.light .text-white {
+  color: #18181b !important;
+}
+
+html.light .text-gray-300 {
+  color: #52525b !important;
+}
+
+html.light .text-gray-400 {
+  color: #71717a !important;
+}
+
+html.light .border-gray-800 {
+  border-color: #e5e7eb !important;
+}
+
+html.light .bg-gradient-to-r {
+  filter: brightness(1.05);
+}
+
+.font-mono {
+  font-family: var(--font-jetbrains);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8b5cf6;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a855f7;
+}
+
+/* Smooth transitions */
+* {
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Focus styles */
+input:focus,
+textarea:focus,
+button:focus {
+  outline: 2px solid #8b5cf6;
+  outline-offset: 2px;
+}
+
+/* Selection styles */
+::selection {
+  background-color: #8b5cf6;
+  color: white;
+}
+
+/* Heading styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sora);
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+/* Paragraph styles */
+p {
+  line-height: 1.5;
+}
+
+/* Animation utilities */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-fadeInDown {
+  animation: fadeInDown 0.6s ease-out;
+}
+
+.animate-fadeInLeft {
+  animation: fadeInLeft 0.6s ease-out;
+}
+
+.animate-fadeInRight {
+  animation: fadeInRight 0.6s ease-out;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Resume button animation */
+.resume-btn {
+  position: relative;
+  overflow: hidden;
+}
+.resume-btn .resume-text {
+  transition: opacity 0.3s, transform 0.3s;
+}
+.resume-btn:hover .resume-text {
+  opacity: 0;
+  transform: scale(0.75);
+}
+.resume-btn .absolute .w-6 {
+  transition: opacity 0.3s;
+}
+.resume-btn:hover .absolute .w-6 {
+  opacity: 1;
+}
+
+/* Card and button shadow for both modes */
+.card, .resume-btn, .bg-gray-900, .bg-gray-900\/50, .bg-gray-800 {
+  box-shadow: 0 2px 8px 0 rgba(80, 80, 120, 0.06);
+}
+
+/* Focus outline for accessibility */
+button:focus, a:focus {
+  outline: 2px solid #8b5cf6;
+  outline-offset: 2px;
+}
+
+/* Section fade-in animation */
+.section-fade {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: sectionFadeIn 0.8s ease-out forwards;
+}
+@keyframes sectionFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Subtle hover/active effects */
+button, a {
+  transition: box-shadow 0.2s, background 0.2s, color 0.2s, border 0.2s;
+}
+button:hover, a:hover {
+  box-shadow: 0 4px 16px 0 rgba(124, 58, 237, 0.10);
+}
+
+/* Consistent spacing for sections */
+section {
+  margin-bottom: 2.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
