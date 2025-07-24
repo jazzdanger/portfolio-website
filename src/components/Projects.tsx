@@ -79,6 +79,26 @@ const Projects = () => {
       demo: null,
       fullDescription: 'A mobile strategy game featuring elemental battles with unique mechanics. Developed using Unity engine with custom shaders and particle effects.',
     },
+    {
+      id: 8,
+      title: 'Emergency Contact System (WhatsApp Gesture Control)',
+      description: 'Hand gesture-based emergency contact system using OpenCV, cvzone, and WhatsApp automation',
+      category: 'AI/ML',
+      tech: ['Python', 'OpenCV', 'cvzone', 'pywhatkit', 'Hand Tracking'],
+      github: 'https://github.com/jazzdanger/hand-gesture-emergency-contact',
+      demo: null,
+      fullDescription: 'A real-time emergency contact system that uses hand gesture recognition via webcam to trigger WhatsApp messages. Utilizes OpenCV for video capture, cvzone for hand tracking, and pywhatkit for WhatsApp automation. Different hand gestures send different emergency or custom messages instantly to a predefined contact. Designed for quick, touchless alerts in critical situations.'
+    },
+    {
+      id: 9,
+      title: 'QR Vibes - Modern QR Generator',
+      description: 'A beautiful, animated web app to generate and manage QR codes instantly',
+      category: 'Web',
+      tech: ['HTML', 'CSS', 'JavaScript', 'QR API', 'LocalStorage'],
+      github: 'https://github.com/jazzdanger/qr-vibes',
+      demo: null,
+      fullDescription: 'A visually stunning QR code generator web app featuring animated QR backgrounds, instant QR creation, download, and a persistent history of generated codes. Built with vanilla HTML, CSS, and JavaScript, it offers a modern UI, notification system, and supports drag-and-drop deployment. Features include animated QR grid background, instant QR code generation, download, and a local history of up to 20 codes.'
+    },
   ];
 
   const filteredProjects = activeFilter === 'All' 
